@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+    baseName = 'gs-messaging-jms'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-activemq")
+    compile group: 'org.springframework', name: 'spring-jms', version:'4.3.4.RELEASE'
+    compile group: 'org.springframework.integration', name: 'spring-integration-jms', version:'4.3.5.RELEASE'
+    compile("org.apache.activemq:activemq-broker")
+    compile("org.springframework.boot:spring-boot-starter-web")
+	compile('javax.xml.bind:jaxb-api')
+
+}

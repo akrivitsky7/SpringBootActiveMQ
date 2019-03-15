@@ -1,0 +1,10 @@
+http://localhost:8080/produce?msg=hello
+this poduces done
+http://localhost:8080/receive
+this produces hello
+
+http://192.168.99.100:8161/admin - active mq admin console
+log/p admin/admin
+http://192.168.99.100:8161/admin/queues.jsp;jsessionid=1bsdi1ctjv89f1h9e91qrpz3we - querires view
+or to queries just
+http://192.168.99.100:8161/admin/queues.jsp
