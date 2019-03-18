@@ -1,0 +1,33 @@
+
+
+
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+           \______ o           __/
+             \    \         __/
+              \____\_______/
+
+docker is configured to use the default machine with IP 192.168.99.100
+For help getting started, check out the docs at https://docs.docker.com
+
+Start interactive shell
+
+Anatoly@MSI MINGW64 ~
+$ docker run --name='activemq' -it --rm -P \
+>  -p 8161:8161 \
+>  -p 61616:61616 \
+>  -p 61613:61613 \
+>  webcenter/activemq:latest
+2019-03-16 16:18:55,962 CRIT Supervisor running as root (no user in config file)
+2019-03-16 16:18:55,963 WARN Included extra file "/etc/supervisor/conf.d/activemq.conf" during parsing
+2019-03-16 16:18:55,963 WARN Included extra file "/etc/supervisor/conf.d/cron.conf" during parsing
+2019-03-16 16:18:55,978 INFO RPC interface 'supervisor' initialized
+2019-03-16 16:18:55,978 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2019-03-16 16:18:55,979 INFO supervisord started with pid 1
+2019-03-16 16:18:56,981 INFO spawned: 'cron' with pid 15
+2019-03-16 16:18:56,983 INFO spawned: 'activemq' with pid 16
+2019-03-16 16:18:58,034 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-03-16 16:18:58,034 INFO success: activemq entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

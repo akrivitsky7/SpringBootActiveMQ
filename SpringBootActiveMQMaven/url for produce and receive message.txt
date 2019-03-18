@@ -1,0 +1,4 @@
+http://localhost:8080/produce?msg=hello
+
+For receiving message
+http://localhost:8080/receive
